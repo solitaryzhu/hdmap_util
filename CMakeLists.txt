@@ -1,14 +1,16 @@
 cmake_minimum_required(VERSION 2.8)
-PROJECT(util_test)
+PROJECT(hdmap_util)
 
 set(CMAKE_CXX_FLAGS_DEBUG "${CXXFLAGS} -O0 -g -Wall -ggdb")
 set(CMAKE_CXX_FLAGS_RELEASE "${CXXFLAGS} -O3 -Wall")
 
+include_directories("${CMAKE_CURRENT_SOURCE_DIR}/trunk/inc/")
 include_directories("${CMAKE_CURRENT_SOURCE_DIR}/trunk/inc/tile/")
 include_directories("${CMAKE_CURRENT_SOURCE_DIR}/trunk/inc/linematch/")
 include_directories("${CMAKE_CURRENT_SOURCE_DIR}/trunk/inc/projection/")
 include_directories("${CMAKE_CURRENT_SOURCE_DIR}/trunk/inc/gisproj/")
 include_directories("${CMAKE_CURRENT_SOURCE_DIR}/trunk/inc/hmmmatch/")
+include_directories("${CMAKE_CURRENT_SOURCE_DIR}/trunk/inc/interpolate/")
 
 file(GLOB_RECURSE SRC "${CMAKE_CURRENT_SOURCE_DIR}/trunk/src/*.cpp")
 file(GLOB_RECURSE INC "${CMAKE_CURRENT_SOURCE_DIR}/trunk/inc/*.h")
